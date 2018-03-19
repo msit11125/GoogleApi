@@ -17,15 +17,15 @@ namespace GoogleOAuth2._0.Controllers
         /// <summary>
         /// 你申請的 client_id
         /// </summary>
-        public string client_id = "452090443712-gkig8256382u7ls6de3lg7k0l0d57pan.apps.googleusercontent.com";
+        public string client_id = "452090443712-c8t459k4749hf7v2qcg5megvmvt1s03s.apps.googleusercontent.com";
         /// <summary>
         /// 你申請的 client_secret
         /// </summary>
-        public string client_secret = "d8Y1yYwoGLgPZiJMMotzL0aB";
+        public string client_secret = "NfOLZyUrTM-nyNBLBY11aTfn";
         /// <summary>
         /// 申請時候設定的回傳網址
         /// </summary>
-        public string redirect_uri = "http://localhost:55415/Home/CallBack";
+        public string redirect_uri = "http://localhost:55415/OAuth/CallBack";
 
 
         public ActionResult Index()
