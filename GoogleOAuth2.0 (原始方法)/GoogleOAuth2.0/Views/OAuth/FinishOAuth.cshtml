@@ -1,0 +1,60 @@
+﻿
+
+@{
+    ViewBag.Title = "FinishOAuth";
+}
+
+
+
+<h2>FinishOAuth</h2>
+
+@Session["result"]
+
+
+<hr />
+<h2>Google Maps API</h2>
+<label>輸入要找的地點: </label><input type="text" />
+<div id="map">
+    ----------GoogleMap 需要100%div----------
+</div>
+
+@section css{
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            height: 70%;
+            width: 100%;
+        }
+    </style>
+}
+
+@section scripts{
+    <script type="text/javascript">
+
+        var map;
+        function initMap() {
+            var location = { lat: 25.0521458, lng: 121.6055953 };
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: location,
+                zoom: 14
+            });
+
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: 'Hello World!'
+            });
+        }
+
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHY1Y8VLAdtlFvM2Mchk7yUey60x0gWDo&callback=initMap">
+    </script>
+
+}
+
